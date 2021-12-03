@@ -1,7 +1,29 @@
 .row {
   display: flex;
+  flex-grow: 1;
+  height: container.height;
+}
+.square {
+  background-color: white;
+  flex-grow: 1;
+  border: 0.5px solid black;
 }
 
-.body {
-  background-color: red;
+.container {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  margin: auto;
+  width: 600px;
+  height: 600px;
+  background-color: gray;
+}
+
+body {
+  font-family: Arial;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
 }
