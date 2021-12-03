@@ -3,24 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Etch a Sketch</title>
-
+    <link rel="stylesheet" href="styles.css">
+    
     <script type="text/javascript">
 
       function createDivs(n) {
-        var c = document.getElementById('container')
+        var c = document.querySelector('.container');
         for (var i = 0; i < n; i++) {
           c.innerHTML += '<div class="row">'
             for (var j = 0; j < n; j++) {
-              c.innerHTML += '<div class="square">'' + (i * n + j) + '</div>'
+              c.innerHTML += '<div class="square">' + (i * n + j) + '</div>';
             }
-          c.innerHTML += '</div>'
+          c.innerHTML += '</div>';
         }
       }
     </script>
   </head>
   <body>
-    <div id="container">
-
+    <h1>Etch a Sketch</h1>
+    <div class="container">
     </div>
+    <script type="text/javascript">
+      createDivs(16);
+    </script>
   </body>
 </html>
