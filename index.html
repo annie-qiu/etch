@@ -4,30 +4,25 @@
     <meta charset="utf-8">
     <title>Etch a Sketch</title>
     <link rel="stylesheet" href="styles.css">
-
-    <script type="text/javascript">
-
-      function createDivs(n) {
-        var c = document.querySelector('.container');
-        for (var i = 0; i < n; i++) {
-          var row = document.createElement("div");
-          row.className = "row";
-          for (var j = 0; j < n; j++) {
-              var square = document.createElement("div");
-              square.className = "square";
-              row.append(square);
-          }
-          c.appendChild(row);
-        }
-      }
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&family=Libre+Franklin&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Etch-a-Sketch</h1>
-    <div class="container">
-    </div>
-    <script type="text/javascript">
-      createDivs(16);
-    </script>
+    <header>
+      <h1>Etch-a-Sketch</h1>
+    </header>
+    <main>
+      <div class="settings">
+        <button type="button" class="clear">Clear</button>
+        <div class="slidercontainer">
+          <p>Grid Size: <span id="sliderValue"></span></p>
+          <input type="range" min="4" max="64" value="16" class="slider"></div>
+      </div>
+      <div class="container"></div>
+
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
